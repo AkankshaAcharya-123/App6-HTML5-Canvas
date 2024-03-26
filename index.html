@@ -17,7 +17,7 @@ Timothy Riedel
 triedel@utexas.edu
  
 Brief Description of Goal of Code:
-blah, blah, blah,
+Create a website with buttons that add an image, rectangle, and my name to an empty canvas which can be cleared. 
  
 Known Issues:
 N/A
@@ -38,36 +38,34 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 var docMod = document.lastModified; // loads last modified time stamp into docMod variable
 alert("This file last modified " + docMod); // generates alert box with time stamp. If annoying, comment out this entire line.
 console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
-var a_canvas = document.getElementById("a");
 
 function draw_b() {
-  var b_canvas = document.getElementById("a");
-  var b_context = b_canvas.getContext("2d");
-  b_context.fillStyle = 'purple';
-  b_context.fillRect(50, 25, 150, 100);
+  var b_canvas = document.getElementById("a"); // gets canvas element
+  var b_context = b_canvas.getContext("2d"); // gets 2d context for canvas
+  b_context.fillStyle = 'purple'; // makes rectangle purple
+  b_context.fillRect(50, 25, 150, 100); // creates rectangle of this size
 }
 
 function draw_name() {
-  var b_canvas = document.getElementById("a");
-  var b_context = b_canvas.getContext("2d");
-  b_context.font = "bold 14px sans-serif";
-  b_context.fillStyle = 'black';
-  b_context.fillText("Akanksha", 200, 43);
+  var b_canvas = document.getElementById("a"); // gets canvas element
+  var b_context = b_canvas.getContext("2d"); // gets 2d context for canvas
+  b_context.font = "bold 14px sans-serif"; //establishes font size and style
+  b_context.fillStyle = 'black'; // resets color to black
+  b_context.fillText("Akanksha", 200, 43); // types my name at specific coordinates
 }
 
 function draw_image() {
-   var canvas = document.getElementById("a");
-   var context = canvas.getContext("2d");
-   var dog = new Image();
-   dog.src = "https://placedog.net/150/100";
-   dog.onload = function() {
-   context.drawImage(dog, 0, 0);}
+   var canvas = document.getElementById("a"); // gets canvas element
+   var context = canvas.getContext("2d"); // gets 2d context for canvas
+   var dog = new Image(); // makes a new image
+   dog.src = "https://placedog.net/150/100"; // gets image from this link
+   dog.onload = function() {context.drawImage(dog, 100, 100);} // puts image on canvas after loading
 }
 
 function clear_canvas(){
-   var canvas = document.getElementById("a");
-   var context = canvas.getContext("2d");
-   context.clearRect(0, 0, canvas.width, canvas.height);
+   var canvas = document.getElementById("a"); // gets canvas element
+   var context = canvas.getContext("2d"); // gets 2d context for canvas
+   context.clearRect(0, 0, canvas.width, canvas.height); // clears canvas
 }
 
 </script>
@@ -106,12 +104,12 @@ function clear_canvas(){
  	
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
 
-   <canvas id="a" width="300" height="225" style="border:1px dotted" ></canvas> 
-   <br/>
-   <button id="b" width="50" height="30" onclick="draw_b()">Draw Rectangle</button>
-   <button id="c" width="50" height="30" onclick="draw_name()">Draw Name</button>
-   <button id="d" width="50" height="30" onclick="draw_image()">Draw Image</button>
-   <button id="e" width="50" height="30" onclick="clear_canvas()">Clear Canvas</button>
+   <canvas id="a" width="300" height="225" style="border:1px dotted" ></canvas> <!-- creates the canvas with border -->
+   <br/> <!-- moves upcoming buttons below canvas -->
+   <button id="b" width="50" height="30" onclick="draw_b()">Draw Rectangle</button> <!-- creates the button to draw rectangle -->
+   <button id="c" width="50" height="30" onclick="draw_name()">Draw Name</button> <!-- creates the button to draw name -->
+   <button id="d" width="50" height="30" onclick="draw_image()">Draw Image</button> <!-- creates the button to draw image -->
+   <button id="e" width="50" height="30" onclick="clear_canvas()">Clear Canvas</button> <!-- creates the button to clear canvas  -->
 
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
