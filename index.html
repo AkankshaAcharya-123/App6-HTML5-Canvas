@@ -43,7 +43,16 @@ var a_canvas = document.getElementById("a");
 function draw_b() {
   var b_canvas = document.getElementById("a");
   var b_context = b_canvas.getContext("2d");
+  b_context.fillStyle = 'purple';
   b_context.fillRect(50, 25, 150, 100);
+}
+
+function draw_name() {
+  var b_canvas = document.getElementById("a");
+  var b_context = b_canvas.getContext("2d");
+  b_context.font = "bold 14px sans-serif";
+  b_context.fillStyle = 'black';
+  b_context.fillText("Akanksha", 200, 43);
 }
 </script>
 
@@ -83,7 +92,7 @@ function draw_b() {
 
    <canvas id="a" width="300" height="225" style="border:1px dotted" ></canvas>
    <button id="b" width="50" height="30" onclick="draw_b()">Draw Rectangle</button>
-   <button id="c" width="50" height="30" onclick="draw_b()">Draw Rectangle</button>
+   <button id="c" width="50" height="30" onclick="draw_name()">Draw Name</button>
 
 
 <footer class="w3-bottom w3-container w3-flat-carrot">
