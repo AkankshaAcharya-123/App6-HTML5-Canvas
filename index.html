@@ -64,6 +64,11 @@ function draw_image() {
    context.drawImage(dog, 0, 0);}
 }
 
+function clear_canvas(){
+   var canvas = document.getElementById("a");
+   var context = canvas.getContext("2d");
+   context.clearRect(0, 0, canvas.width, canvas.height);
+}
 
 </script>
 
@@ -101,10 +106,12 @@ function draw_image() {
  	
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
 
-   <canvas id="a" width="300" height="225" style="border:1px dotted" ></canvas>
+   <canvas id="a" width="300" height="225" style="border:1px dotted" ></canvas> 
+   <br/>
    <button id="b" width="50" height="30" onclick="draw_b()">Draw Rectangle</button>
    <button id="c" width="50" height="30" onclick="draw_name()">Draw Name</button>
    <button id="d" width="50" height="30" onclick="draw_image()">Draw Image</button>
+   <button id="e" width="50" height="30" onclick="clear_canvas()">Clear Canvas</button>
 
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
