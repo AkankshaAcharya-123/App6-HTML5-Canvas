@@ -54,6 +54,17 @@ function draw_name() {
   b_context.fillStyle = 'black';
   b_context.fillText("Akanksha", 200, 43);
 }
+
+function draw_image() {
+   var canvas = document.getElementById("a");
+   var context = canvas.getContext("2d");
+   var dog = new Image();
+   dog.src = "https://placedog.net/150/100";
+   dog.onload = function() {
+   context.drawImage(dog, 0, 0);}
+}
+
+
 </script>
 
 
@@ -93,7 +104,7 @@ function draw_name() {
    <canvas id="a" width="300" height="225" style="border:1px dotted" ></canvas>
    <button id="b" width="50" height="30" onclick="draw_b()">Draw Rectangle</button>
    <button id="c" width="50" height="30" onclick="draw_name()">Draw Name</button>
-
+   <button id="d" width="50" height="30" onclick="draw_image()">Draw Image</button>
 
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
